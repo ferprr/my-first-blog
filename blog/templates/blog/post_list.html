@@ -9,14 +9,12 @@
             This site was based in a wonderful project:
             <a href= "https://djangogirls.org">djangogirls</a>
         </p>
+        {% for post in posts %}
         <div>
-            <p>published on 04.12.2020, 11:05</p>
-            <h2><a href="">Lorem Ipsum</a></h2>
-            <p>
-                Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. 
-                Donec id elit non mi porta gravida at eget metus. 
-                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-            </p>
+            <p>published: {{post.published_date}}</p>
+            <h2><a href= "">{{post.title}}</a></h2>
+            <p>{{post.text|linebreaksbr}}</p>
         </div>
+        {% endfor %}
     </body>
 </html>
