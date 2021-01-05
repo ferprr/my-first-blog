@@ -1,19 +1,30 @@
+<!DOCTYPE html>
 {% load static %}
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>Studio 42</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href= "//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
+        <style>
+            div.a {
+                text-align: center;
+            }
+        </style>
         <div class="page-header">
+            <div class = "a">
+                <h1><a href="/">Studio 42</a></h1>
+            </div>
+        <h2><a href="/">Publicity and design for arquitects and engineers.</a></h2>
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             {% endif %}
-            <h1><a href="/">Django Girls Blog</a></h1>
+            <h2><a href="/">Hey guys! My name is Rogerio Chein and this is the Studio 42. Here you gonna see renderings, and humanized plans. Enjoy! </a></h2>
         </div>
+        <img src="render.png" alt="some text" width="800" height="500"/>
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
